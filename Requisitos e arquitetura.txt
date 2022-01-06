@@ -1,4 +1,4 @@
-Sistema Bancáro
+Sistema Bancário
 
 -> Saque e Depósito em uma conta					TCP
 -> Criar conta										TCP
@@ -6,18 +6,19 @@ Sistema Bancáro
 -> Ter banco de dados
 
 
-ARCH
+Arquitetura
 Classes
 	Banco 					(getSaldoTotal, criarConta, fecharConta)				C
 	Conta 					(idConta, saldo)(saque, deposito, getSaldo)				C
---->ServerTCPUDP			Recebe solicitações e acessa BD 						E
-|	ClienteUDP				Exibe saldos de todas contas e do banco 				L
-|	ClienteTCP				Solicita operações 										L
-|
-|
---->BancoDados
+    ServerUDP			    Recebe solicitações e acessa BD 						E
+	ClienteUDP				Exibe saldos de todas contas e do banco 				L
+	ServerTCP			    Recebe solicitações e acessa BD 						E
+	ClienteTCP				Exibe saldos de todas contas e do banco 				L
+
+
+BancoDados
 	contas(idConta, saldo)															C
 
 PRÓXIMO SPRINT DIA 09/01 ÀS 19
 
-DATA ENTREGA DIA 15
+DATA ENTREGA DIA 15/01
